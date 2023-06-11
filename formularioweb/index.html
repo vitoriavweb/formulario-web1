@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="../formularioweb/css/index.css">
+</head>
+<body>
+  <div class="content">
+  <h1>Cadastro de Cliente</h1>
+
+  <form id="formulario">
+    <div>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required>
+    </div>
+
+    <div>
+      <label for="id">ID:</label>
+      <input type="text" id="id" required>
+    </div>
+
+    <div>
+      <label for="tipoCliente">Tipo de cliente:</label>
+      <select id="tipoCliente" required>
+        <option value="">Selecione</option>
+        <option value="fisica">Pessoa Física</option>
+        <option value="juridica">Pessoa Jurídica</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" required>
+    </div>
+
+    <div>
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" required>
+    </div>
+
+    <div>
+      <label for="dataNascimento">Data de Nascimento:</label>
+      <input type="date" id="dataNascimento" required>
+    </div>
+
+    <div>
+      <label for="vendedor">Vendedor:</label>
+      <input type="text" id="vendedor" required>
+    </div>
+
+    <div>
+      <label for="limiteCredito">Limite de Crédito:</label>
+      <input type="text" id="limiteCredito" required>
+    </div>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+</div>
+
+  <script src="../formularioweb/js/bb.js"></script>
+</body>
+</html>
