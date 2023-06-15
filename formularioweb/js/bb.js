@@ -25,50 +25,45 @@ function setCookie(name, value, days) {
     try {
       var nome = document.getElementById('nome').value;
       var id = document.getElementById('id').value;
-      var tipoCliente = document.getElementById('tipoCliente').value;
+      var tipoCliente = document.getElementById('tipocliente').value;
       var endereco = document.getElementById('endereco').value;
       var cep = document.getElementById('cep').value;
-      var dataNascimento = document.getElementById('dataNascimento').value;
+      var dataNascimento = document.getElementById('datanascimento').value;
       var vendedor = document.getElementById('vendedor').value;
-      var limiteCredito = document.getElementById('limiteCredito').value;
+      var limitecredito = document.getElementById('limitecredito').value;
   
-      if (nome === '') {
-        throw new Error('Nome é obrigatório');
+      if (nome === '' || nome.length < 3 || !/^[a-zA-Z]+$/.test(nome)) {
+        throw new Error('Nome inválido!');
       }
-
-      if (nome === "<3"){
-        throw new Error('Nome deve ter no mínimo 3 letras')
-      }
-  
-      if (id === '') {
-        throw new Error('ID é obrigatório');
+        
+      if (id === '' || id.length < 8) {
+        throw new Error('ID inválido!');
       }
   
       if (tipoCliente === '') {
-        throw new Error('Selecione um tipo de cliente');
+        throw new Error('Selecione um tipo de cliente!');
       }
   
       if (endereco === '') {
-        throw new Error('Endereço é obrigatório');
+        throw new Error('Endereço é obrigatório!');
       }
   
-      if (cep === '') {
-        throw new Error('CEP é obrigatório');
+      if (cep === ''|| cep.length < 8) {
+        throw new Error('CEP inválido!');
       }
   
       if (dataNascimento === '') {
-        throw new Error('Data de Nascimento é obrigatória');
+        throw new Error('Data de Nascimento é obrigatória!');
       }
   
-      if (vendedor === '') {
-        throw new Error('Vendedor é obrigatório');
+      if (vendedor === '' || vendedor.length < 3 || !/^[a-zA-Z]+$/.test(vendedor)) {
+        throw new Error('Nome de vendedor inválido!');
       }
   
-      if (limiteCredito === '') {
-        throw new Error('Limite de Crédito é obrigatório');
+      if (limitecredito === '') {
+        throw new Error('Limite de crédito obrigatório!');
       }
   
-      // Armazenar nome e ID em cookies
       setCookie('nome', nome, 7);
       setCookie('id', id, 7);
   
